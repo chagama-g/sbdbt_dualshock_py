@@ -2,7 +2,7 @@
 
 ## Installation
 ```bash
-git clone https://github.com/chagama-g/sbdbt_dualshock_py
+git clone https://github.com/chagama-g/sbdbt_dualshock_py.git
 pip install sbdbt_dualshock_py/
 ```
 ### USBシリアルのアクセス権限の設定。
