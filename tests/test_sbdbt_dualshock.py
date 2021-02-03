@@ -1,10 +1,12 @@
 from sbdbt_dualshock_py import SBDBT
 
 import time
+import sys
 
 
-def main(serial_name):
-    sbdbt = SBDBT(serial_name)
+def main():
+    port = sys.argv[1]
+    sbdbt = SBDBT(port)
 
     while True:
         rx = sbdbt.receive()
@@ -15,7 +17,10 @@ def main(serial_name):
 
 
 if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        raise Exception("Specify the serial port as an argument")
+
     try:
-        main("COM3")
+        main()
     except KeyboardInterrupt:
         print("Keyboard Interrupted.")
