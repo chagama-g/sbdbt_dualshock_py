@@ -10,9 +10,10 @@ setup(
     name="sbdbt_dualshock_py",
     version="0.0.0",
     licence="licence",
-    description="description of package",
-    author="chagama",
+    description="Obtain data from Dualshock via SBDBT.",
+    author="chagama-g",
 
     packages=find_packages(where="src"),
     package_dir={'': 'src'},
+    install_requires=_requires_from_file('requirements.txt'),
 )
